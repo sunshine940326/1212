@@ -1,0 +1,333 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport'
+          content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no'/>
+    <meta charset='utf-8'>
+    <script>
+
+        function browserRedirect(){
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+            } else {
+                window.location = 'indexpc.html';
+            }
+        }
+        browserRedirect();
+
+        window.addEventListener("resize", function() {
+            if (window.innerWidth<window.innerHeight) {
+                $('#orientLayer').hide();
+            }else{
+                //横屏状态
+                $('#orientLayer').show();
+            }
+        }, false);
+    </script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <title>1212淘宝亲亲节</title>
+
+    <script src="playcanvas-stable.min.js"></script>
+    <script>
+        ASSET_PREFIX = "";
+        SCRIPT_PREFIX = "";
+        SCENE_PATH = "476051.json";
+        CONTEXT_OPTIONS = {
+            'alpha': false,
+            'preserveDrawingBuffer': false
+        };
+        SCRIPTS = [ 5680380, 5716309, 5735213, 5736672, 5744917, 5752302, 5759365, 5759857, 5765248, 5765737, 5784393, 5784394, 5785179, 5785578 ];
+        CONFIG_FILENAME = "config.json";
+        pc.script.legacy = false;
+    </script>
+    <style></style>
+</head>
+<body>
+
+<div class="style-1 " id="style">
+    <div class="container">
+        <a href="#" class="nav_trigger" id="menubtn">
+            <img src="img/menuicon.png" id="menubtn2">
+        </a>
+        <nav class="nav navcontent">
+            <div class="bg">
+            </div>
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+
+            <div class="back" id="return1btn"></div>
+            <div class="backbottom" id="return2btn"></div>
+            <div class="nav_list clearfix">
+                <img src="img/1201.png" alt="" class="img1" id="img1">
+                <img src="img/1202.png" alt="" class="img2" id="img2">
+                <img src="img/1203.png" alt="" class="img3" id="img3">
+                <img src="img/1204.png" alt="" class="img4" id="img4">
+                <img src="img/1205.png" alt="" class="img5" id="img5">
+                <img src="img/1206.png" alt="" class="img6" id="img6">
+                <img src="img/1207.png" alt="" class="img7" id="img7">
+                <img src="img/1208.png" alt="" class="img8" id="img8">
+                <img src="img/1209.png" alt="" class="img9" id="img9">
+                <img src="img/1210.png" alt="" class="img10" id="img10">
+                <img src="img/1211.png" alt="" class="img11" id="img11">
+                <img src="img/1212.png" alt="" class="img12" id="img12">
+            </div>
+            <div class="content">
+                <div class="contentimg">
+                    <img src="img/clickbg.png" alt="">
+                    <img src="img/12011.png" id="contentimg">
+                    <div class="btn" id="btnClose">
+                        <img src="img/btn1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="content3D">
+                <div class="bg3D">
+                </div>
+                <div class="content3Dimg">
+                    <img src="img/clickbg.png" alt="">
+                    <img src="img/12011.png" id="content3Dimg">
+                    <div class="btn" id="btnClose3D">
+                        <img src="img/btn1.png" >
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="musicclose" id="musicclose">
+    <img src="img/musicon.png" >
+</div>
+<div class="up" id="upbtn">
+    <img src="img/up.png" >
+</div>
+
+<div class="share" id="downbtn">
+    <div class="shareimg">
+        <img src="img/share.png" >
+    </div>
+    <div class="sharebottomimg">
+        <img src="img/sharebottom.png">
+    </div>
+</div>
+<div id="orientLayer" class="mod-orient-layer">
+
+</div>
+<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?b963868504d0df21861aa5e85376f0a6";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    var host = window.location.host;
+    neoneClick(host);
+
+    function neoneView(id)
+    {
+        if (_hmt)
+        {
+            _hmt.push(['_trackEvent', 'View' , 'view_'+id]);
+        }
+    }
+
+    function neoneClick(eventId)
+    {
+        console.log(eventId);
+        if (_hmt)
+        {
+            _hmt.push(['_trackEvent', 'onClick' , 'onclick_'+eventId]);
+        }
+    }
+
+    getKol();
+
+    function getKol()
+    {
+        var kol = GetQueryString('nq');
+        if (kol)
+        {
+            neoneClick(kol);
+        }
+    }
+
+    function GetQueryString(name)
+    {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    }
+
+    function callback(data)
+    {
+        console.log(data);
+        wx.config({
+            debug: false,
+            appId: data.appid,
+            timestamp: data.timestamp,
+            nonceStr: data.nonceStr,
+            signature: data.signature,
+            jsApiList: [
+                'checkJsApi',
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage',
+                'playVoice',
+                'onVoicePlayEnd',
+                'pauseVoice',
+                'stopVoice',
+            ]
+        });
+
+        wx.ready(function () {
+            wxcheck();
+            function wxcheck(){
+                wx.checkJsApi({
+                    jsApiList: [
+                        'onMenuShareTimeline',
+                        'onMenuShareAppMessage'
+                    ],
+                    success: function (res) {
+                        //alert(JSON.stringify(res));
+                    }
+                });
+            }
+
+            wx.onMenuShareTimeline({
+                imgUrl : window.share.imgUrl,
+                link : window.share.link,
+                title : window.share.desc,
+                desc : window.share.desc,
+                success: function () {
+                    neoneClick('wechatShareTimeLine');
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+
+            wx.onMenuShareAppMessage({
+                imgUrl : window.share.imgUrl,
+                link : window.share.link,
+                title : window.share.title,
+                desc : window.share.desc,
+                trigger: function (res) {
+                    //	alert('用户点击分享到朋友圈');
+                },
+                success: function (res) {
+                    neoneClick('wechatShareAppMessage');
+                },
+                cancel: function (res) {
+                    //	alert('已取消');
+                },
+                fail: function (res) {
+                    //	alert(JSON.stringify(res));
+                }
+            });
+
+        });
+    }
+    //分享
+    function jsonp(options) {
+        options = options || {};
+        if (!options.url || !options.callback) {
+            throw new Error("参数不合法");
+        }
+
+        //创建 script 标签并加入到页面中
+        var callbackName = ('jsonp_' + Math.random()).replace(".", "");
+        var oHead = document.getElementsByTagName('head')[0];
+        options.data[options.callback] = callbackName;
+        var oS = document.createElement('script');
+        oHead.appendChild(oS);
+
+        //创建jsonp回调函数
+        window[callbackName] = function (json) {
+            oHead.removeChild(oS);
+            clearTimeout(oS.timer);
+            window[callbackName] = null;
+            options.success && options.success(json);
+        };
+
+        //发送请求
+        oS.src = options.url;
+
+        //超时处理
+        if (options.time) {
+            oS.timer = setTimeout(function () {
+                window[callbackName] = null;
+                oHead.removeChild(oS);
+                options.fail && options.fail({ message: "超时" });
+            }, time);
+        }
+    };
+
+    (function() {
+        window.share = {
+            imgUrl : window.location.origin + "/img/share.jpg",
+            link : 't.cn/RfR5bTY',
+            title : "1212淘宝亲亲节",
+            desc : "亲亲节分享内容",
+        };
+
+        var sharedesc = [
+            '亲，你的1212到了，请查收',
+            '1212来了！提前来转转',
+            '亲，1212邀你一起转转转转转转',
+            '亲亲亲亲亲，这次1212厉害了',
+            '1212，厉害了亲亲亲亲亲合力'
+        ];
+
+        window.share.desc = sharedesc[Math.floor(Math.random()*5)];
+
+
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i)=="micromessenger")
+        {
+            console.log(window.location.href)
+            var shareUrl = encodeURIComponent(window.location.href);
+            console.log(shareUrl)
+            var host = window.location.host;
+            var src = "http://wechat.test.neone.com.cn/partner-api/getshare/1/?jsoncallback=callback&shareurl="+shareUrl;
+            if (host == 'www.qinqinevent.com' || host == 'www.h5qinqin.com' || host == 'www.qinqinh5.com' || host == 'qinqinh5.com')
+                src = "http://wechat.test.neone.com.cn/partner-api/getshare/2/?jsoncallback=callback&shareurl="+shareUrl;
+            jsonp({
+                type:"get",
+                url: src,
+                data:"",
+                callback:'callback',
+                success:function(data){
+                    console.log(data);
+                }
+            });
+        }
+    })();
+
+    function weiboShare()
+    {
+        (function(s,d,e)
+        {
+            try{}
+            catch(e){}
+            var f='http://v.t.sina.com.cn/share/share.php?',p=['url=',e(window.sharedata.link),'&title=',e(window.sharedata.title),'&appkey=2206048557','&pic=',e(window.sharedata.imgUrl)].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent);
+    }
+
+
+</script>
+<script src="js/jquery.js"></script>
+<script src="js/index.js"></script>
+<script src="__start__.js"></script>
+<script src="__loading__.js"></script>
+
+</body>
+</html>
